@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PSU TEMPLATE</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div data-aos="fade-down" data-aos-duration="700" class="logo"><img src="images-removebg-preview.png" alt=""></div>
+            <ul data-aos="fade-down" data-aos-duration="700">
+                <li>Home</li>
+                <li>Projects</li>
+                <li>About</li>
+                <li>Contacts</li>
+            </ul>
+        </div>
+        <div class="banner" style="background-image: url('lingayen-1.jpg');">
+            <div data-aos="fade-left" data-aos-delay="900" data-aos-duration="700" class="glass-wrapper"></div>
+        </div>
+        <div class="hero-title">
+            <p data-aos="fade-left" data-aos-delay="500" data-aos-duration="700" class="line">School</p>
+            <p data-aos="fade-left" data-aos-delay="600" data-aos-duration="700" class="school">PSU' <span class="multitext"></span></p>
+            <div data-aos="fade-left" data-aos-delay="800" data-aos-duration="700" class="details">
+                Pangasinan State University (Filipino: Pamantasang Pampamahalaan ng Pangasinan) also referred to by its acronym PSU or (PangSU)) is a public university in Pangasinan province, Philippines. The university was founded in its current form in 1979, although its origins trace back to the 1920s.
+            </div>
+            <div data-aos="fade-left" data-aos-delay="800" data-aos-duration="700" class="Visit">
+                <button>Visit</button>
+            </div>
+        </div>
+        <div class="psu-list">
+            <ul class="place-list">
+                <li data-aos="zoom-in" data-aos-duration="700" data-aos-duration="700" class="active"
+                data-img = "lingayen-1.jpg">
+                    <div class="thumbnail" style="background-image: url('lingayen-1.jpg');">
+                    <div class="details">
+                        <p class="place">PSU</p>
+                        <p class="place-name">P. State University</p>
+                    </div>
+                    </div>
+                </li>
+                <li
+                data-aos="zoom-in" data-aos-duration="750" data-aos-duration="700" data-img = "Grand\ Legacy_psu-1662571660.jpg">
+                    <div class="thumbnail" style="background-image: url('Grand\ Legacy_psu-1662571660.jpg');">
+                    <div class="details">
+                        <p class="place">PSU</p>
+                        <p class="place-name">P. State University</p>
+                    </div>
+                    </div>
+                </li>
+                <li
+                data-aos="zoom-in" data-aos-duration="850" data-aos-duration="700" data-img = "PSU\ image\ 6-1662571698.jpg">
+                    <div class="thumbnail" style="background-image: url('PSU\ image\ 6-1662571698.jpg');">
+                    <div class="details">
+                        <p class="place">NARCISO</p>
+                        <p class="place-name">P. State University</p>
+                    </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+     <script>
+     AOS.init();
+
+        var typingEffect = new Typed(".multitext",{
+            strings : ["PANGASINAN","STATE","UNIVERSITY"],
+            loop : true,
+            typeSpeed : 100,
+            backSpeed : 80,
+            backDelay : 1500
+        });
+
+    let places = document.querySelectorAll('.psu-list li')
+    let active = "lingayen-1.jpg";
+
+    places.forEach((e) => {
+        e.addEventListener("mouseenter", (event) => {
+            places.forEach((e) => {
+                e.classList.remove("active");
+            });
+
+            event.target.classList.add("active");
+            active = event.target.getAttribute('data-img')
+            let banner = document.querySelector('.banner')
+            banner.style.backgroundImage = `url('${active}')`;
+        });
+    });
+     </script>
+</body>
+</html>

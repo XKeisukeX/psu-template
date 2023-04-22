@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Monserrat', sans-serif;
+}
+.header{
+    display: flex;
+    justify-content: space-around;
+    padding: 0.5rem;
+    max-width: 1200px;
+    margin: 0px auto;
+    align-items: center;
+}
+.header ul{
+    display: flex;
+    list-style: none;
+    text-transform: uppercase;
+    gap: 8rem;
+    cursor: pointer;
+    letter-spacing: 3px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+}
+.header .logo img{
+    height: 83%;
+    width: 22%;
+}
+.banner{
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    transition: 2s ease;
+}
+.glass-wrapper{
+    background:
+    rgba( 255, 255, 255, 0.25 );
+    box-shadow:
+    0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter:
+    blur( 4px );
+    -webkit-backdrop-filter:
+    blur( 4px );
+    border-radius:
+    10px;
+    border:
+    1px solid rgba( 255, 255, 255, 0.18 );
+    height: 100%;
+    width: 30%;
+}
+.hero-title{
+    max-width: 1200px;
+    margin: 0px auto;
+    padding-top: 7rem;
+}
+.hero-title .line{
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 8px;
+}
+.line{
+    display: block;
+    position: relative;
+    font-size: 35px;
+    letter-spacing: 5px;
+    color: #3d535f;
+}
+.line::after{
+    position: absolute;
+    content: '';
+    height: 4px;
+    width: 45px;
+    bottom: -5.5px;
+    background-color:  #1778f2;
+}
+.hero-title .school{
+    font-size: 65px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #1778f2;
+    letter-spacing: 4px;
+    line-height: 80px;
+}
+.multitext{
+    color: #ffef00;
+    text-transform: capitalize;
+}
+.hero-title .details{
+    padding-top: 0.3rem;
+    letter-spacing: 3px;
+    padding-bottom: 4.5rem;
+    font-size: 16px;
+    font-weight: 200;
+    color: #fff;
+    width: 58%;
+}
+.hero-title .Visit button{
+    background:
+    rgba( 255, 255, 255, 0.25 );
+    box-shadow:
+    0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter:
+    blur( 4px );
+    -webkit-backdrop-filter:
+    blur( 4px );
+    border-radius:
+    10px;
+    border:
+    1px solid rgba( 255, 255, 255, 0.18 );
+    padding: 12px 35px;
+    color: #fff;
+    letter-spacing: 3px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    border-radius: 50px;
+}
+.psu-list{
+    bottom: 25px;
+    position: absolute;
+    left: 35rem;
+}
+.psu-list p{
+   color: #fff;
+   padding-left: 16px;
+   margin-bottom: auto;
+   line-height: 24px;
+}
+.psu-list ul{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    width: 55vw;
+    height: 10rem;
+    align-items: center;
+}
+.psu-list .thumbnail{
+    display: flex;
+    height: 10rem;
+    width: 15rem;
+    background-size: cover !important;
+    border-radius: 8px;
+    flex-direction: column;
+    cursor: pointer;
+}
+.psu-list .thumbnail .details{
+    margin-top: auto;
+    padding: 10px 0px;
+    background: rgba(38, 38, 38, 0.05);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+}
+.details .place-name{
+    font-size: 24px;
+    font-weight: 600;
+}
+.details .place{
+    font-weight: 500;
+}
+.psu-list .active{
+    margin-top: -5rem;
+}
